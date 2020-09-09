@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     border: 25px solid #26262D;
     margin: 0;
@@ -22,7 +26,7 @@ body{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-
+    position: relative;
 }
 
 .cover .name {
@@ -35,11 +39,30 @@ body{
     font-weight: 300;
 }
 
+.click {
+    position: absolute;
+    bottom: 15%;
+    color: #ffffff;
+}
+
 .about {
     display: flex;
     column-gap: 75px;
     justify-content: center;
     padding-bottom: 100px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
 }
 
 .about img{
@@ -49,8 +72,7 @@ body{
 }
 
 .about p {
-    height: auto;
-    width: 500px;    
+    max-width: 500px;    
 }
 
 .about li {
@@ -67,54 +89,63 @@ body{
 .about .btn {
     background: #f26b38;
     border-color: #f26b38;
-    height: 42px;
+    border-radius: 240994px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 0.9rem;
+    line-height: 2.8rem;
     text-align: center;
+    transition-property: box-shadow, transform;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
     padding: 0 30px;
     cursor: pointer;
-    margin: 30px 0 0 60px;
+    margin: 30px 0 0 75px;
 }
-
-
-
-
 
 
 .resume {
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10rem auto;
+    width: 700px;
 }
 
 .resume .resume-item {
     position: relative;
-    top: -10px;
-    margin: 0 0 5px 0;
+    top: 0;
     display: inline-block;
     padding: 0 5px;
-    height: 40px;
+    height: 100px;
+    width: 500px;
     line-height: 18px;
-    border: 1px solid #f26b38;
+    padding: 0 30px 60px 30px;
 }
 
-.resume-item::before {
+.resume-item:not(:last-child)::before {
     content: '';
     width: 3px;
     height: 100%;
-    background-color: red;
+    background-color: #f26b38;
     position: absolute;
-    top: 0; 
-    left: 1;
+    top: .6rem; 
+    left: 0;
 }
 
-.resume .resume-item {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 30px 60px 30px;
-
+/*
+Unsure how to make ::after curb off :(
+*/
+.resume-item::after {
+    content: '';
+    display:block;
+    clear:both;
 }
+
 
 .resume .dates {
     position: relative;
-    margin: 0 0 5px 0;
+    margin: 0 0 5px  0;
     display: inline-block;
     padding: 0 5px;
     height: 20px;
@@ -123,4 +154,14 @@ body{
     font-size: 11px;
     color: #f26b38;
     border: 1px solid #f26b38;
+}
+
+.resume .dates::before {
+    content: '';
+    width: 29px;
+    height: 3px;
+    background-color: #f26b38;
+    position: absolute;
+    top: .5rem; 
+    left: -30px;
 }
