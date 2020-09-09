@@ -1,0 +1,126 @@
+body{
+    border: 25px solid #26262D;
+    margin: 0;
+    background-color: #31313A;
+    font-family: 'Roboto Mono';
+    letter-spacing: 0;
+    color: #ffffff;
+    font-size: 12px;
+
+}
+
+.container {
+    position: relative;
+    margin: 30px;
+    overflow: hidden;
+}
+
+.cover {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.cover .name {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.cover .title {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.about {
+    display: flex;
+    column-gap: 75px;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.about img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+.about p {
+    height: auto;
+    width: 500px;    
+}
+
+.about li {
+    display: block;
+}
+
+
+.about strong {
+    color: #f26b38;
+    font-weight: 400;
+}
+
+
+.about .btn {
+    background: #f26b38;
+    border-color: #f26b38;
+    height: 42px;
+    text-align: center;
+    padding: 0 30px;
+    cursor: pointer;
+    margin: 30px 0 0 60px;
+}
+
+
+
+
+
+
+.resume {
+    display: flex;
+}
+
+.resume .resume-item {
+    position: relative;
+    top: -10px;
+    margin: 0 0 5px 0;
+    display: inline-block;
+    padding: 0 5px;
+    height: 40px;
+    line-height: 18px;
+    border: 1px solid #f26b38;
+}
+
+.resume-item::before {
+    content: '';
+    width: 3px;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    top: 0; 
+    left: 1;
+}
+
+.resume .resume-item {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px 60px 30px;
+
+}
+
+.resume .dates {
+    position: relative;
+    margin: 0 0 5px 0;
+    display: inline-block;
+    padding: 0 5px;
+    height: 20px;
+    line-height: 18px;
+    font-weight: 500;
+    font-size: 11px;
+    color: #f26b38;
+    border: 1px solid #f26b38;
+}
