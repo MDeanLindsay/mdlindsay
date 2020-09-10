@@ -18,6 +18,30 @@ body {
   overflow: hidden;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.header li {
+  display: block;
+}
+
+.header .menu-button {
+  background: #f26b38;
+  border-color: #f26b38;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 0.9rem;
+  line-height: 2.8rem;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0 30px;
+  cursor: pointer;
+}
+
 .cover {
   height: 100vh;
   display: flex;
@@ -35,8 +59,8 @@ body {
 }
 
 .cover .title {
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 .title p {
@@ -117,6 +141,10 @@ ul {
   max-width: 500px;
 }
 
+.about h2 {
+  font-size: 20px;
+  font-weight: 300;
+}
 .about li {
   display: block;
 }
@@ -152,6 +180,10 @@ ul {
   width: 700px;
 }
 
+.resume h2 {
+  font-size: 20px;
+  font-weight: 300;
+}
 .resume a {
   color: #ffffff;
 }
@@ -168,7 +200,7 @@ ul {
 
 .resume-item:not(:last-child)::before {
   content: "";
-  width: 3px;
+  width: 1px;
   height: 100%;
   background-color: #f26b38;
   position: absolute;
@@ -198,21 +230,55 @@ ul {
 .resume .dates::before {
   content: "";
   width: 29px;
-  height: 3px;
+  height: 1px;
   background-color: #f26b38;
   position: absolute;
   top: 0.5rem;
   left: -30px;
 }
 
+.things-title .tech {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.things {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10rem;
+  padding-bottom: 200px;
+}
+
+.things li::before {
+  content: ("..//images/check.svg");
+  width: 20px;
+}
+
+.things li {
+  display: block;
+}
+
+.skills-title .tech {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+}
 .skills {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 7rem;
-  padding-bottom: 100px;
-  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 .skill {
