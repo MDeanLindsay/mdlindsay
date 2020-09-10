@@ -1,170 +1,250 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-body{
-    border: 25px solid #26262D;
-    margin: 0;
-    background-color: #31313A;
-    font-family: 'Roboto Mono';
-    letter-spacing: 0;
-    color: #ffffff;
-    font-size: 12px;
-
+body {
+  border: 25px solid #26262d;
+  margin: 0;
+  background-color: #31313a;
+  font-family: "Roboto Mono";
+  letter-spacing: 0;
+  color: #ffffff;
+  font-size: 12px;
 }
 
 .container {
-    position: relative;
-    margin: 30px;
-    overflow: hidden;
+  position: relative;
+  margin: 30px;
+  overflow: hidden;
 }
 
 .cover {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
 }
 
 .cover .name {
-    font-size: 56px;
-    font-weight: 700;
-    text-shadow: 3px 0px #f26b38;
+  font-size: 70px;
+  font-weight: 700;
+  text-shadow: 4px 0px #f26b38;
 }
 
 .cover .title {
-    font-size: 13px;
-    font-weight: 300;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.title p {
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.title p span.typed-text {
+  color: #ffffff;
+}
+
+.title p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+
+.title p span.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
 }
 
 .click {
-    position: absolute;
-    bottom: 15%;
-    color: #ffffff;
+  position: absolute;
+  bottom: 10%;
+  height: 40px;
 }
 
 .about {
-    display: flex;
-    column-gap: 75px;
-    justify-content: center;
-    padding-bottom: 100px;
-    padding-top: 100px;
+  display: flex;
+  column-gap: 75px;
+  justify-content: center;
+  padding-bottom: 100px;
+  padding-top: 100px;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 1024px) {
-    .about {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-    }
+  .about {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 
-.about img{
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
+.about img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
 }
 
 .about p {
-    max-width: 500px;    
+  max-width: 500px;
 }
 
 .about li {
-    display: block;
+  display: block;
 }
-
 
 .about strong {
-    color: #f26b38;
-    font-weight: 400;
+  color: #f26b38;
+  font-weight: 400;
 }
 
-
+.about a {
+  color: #ffffff;
+}
 .about .btn {
-    background: #f26b38;
-    border-color: #f26b38;
-    border-radius: 240994px;
-    color: #ffffff;
-    display: inline-block;
-    font-size: 0.9rem;
-    line-height: 2.8rem;
-    text-align: center;
-    white-space: nowrap;
-    padding: 0 30px;
-    cursor: pointer;
-    margin: 30px 0 0 30px;
+  background: #f26b38;
+  border-color: #f26b38;
+  border-radius: 240994px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 0.9rem;
+  line-height: 2.8rem;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0 30px;
+  cursor: pointer;
+  margin: 30px 0 0 30px;
 }
-
 
 .resume {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 10rem auto;
-    width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10rem auto;
+  width: 700px;
 }
 
 .resume a {
-    color: #ffffff;
+  color: #ffffff;
 }
 .resume .resume-item {
-    position: relative;
-    top: 0;
-    display: inline-block;
-    padding: 0 5px;
-    height: 100px;
-    width: 500px;
-    line-height: 18px;
-    padding: 0 30px 60px 30px;
+  position: relative;
+  top: 0;
+  display: inline-block;
+  padding: 0 5px;
+  height: 100px;
+  width: 500px;
+  line-height: 18px;
+  padding: 0 30px 60px 30px;
 }
 
 .resume-item:not(:last-child)::before {
-    content: '';
-    width: 3px;
-    height: 100%;
-    background-color: #f26b38;
-    position: absolute;
-    top: .6rem; 
-    left: 0;
+  content: "";
+  width: 3px;
+  height: 100%;
+  background-color: #f26b38;
+  position: absolute;
+  top: 0.6rem;
+  left: 0;
 }
 
-/*
-Unsure how to make ::after curb off :(
-*/
 .resume-item::after {
-    content: '';
-    display:block;
-    clear:both;
+  content: "";
+  display: block;
+  clear: both;
 }
-
 
 .resume .dates {
-    position: relative;
-    margin: 0 0 5px  0;
-    display: inline-block;
-    padding: 0 5px;
-    height: 20px;
-    line-height: 18px;
-    font-weight: 500;
-    font-size: 11px;
-    color: #f26b38;
-    border: 1px solid #f26b38;
+  position: relative;
+  margin: 0 0 5px 0;
+  display: inline-block;
+  padding: 0 5px;
+  height: 20px;
+  line-height: 18px;
+  font-weight: 500;
+  font-size: 11px;
+  color: #f26b38;
+  border: 1px solid #f26b38;
 }
 
 .resume .dates::before {
-    content: '';
-    width: 29px;
-    height: 3px;
-    background-color: #f26b38;
-    position: absolute;
-    top: .5rem; 
-    left: -30px;
+  content: "";
+  width: 29px;
+  height: 3px;
+  background-color: #f26b38;
+  position: absolute;
+  top: 0.5rem;
+  left: -30px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7rem;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills .skill {
+  text-align: left;
+  max-width: 300px;
+}
+
+.badge {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.badge h3 {
+  margin-left: 1.5rem;
+}
+
+.badge .extra-logo {
+  margin-left: 1.5rem;
+}
+
+.badge svg {
+  fill: #f26b38;
+  height: 40px;
+}
+
+.skill h3 {
+  font-size: 28px;
 }
