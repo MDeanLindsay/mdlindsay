@@ -1,0 +1,109 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  border: 25px solid #26262d;
+  margin: 0;
+  background-color: #31313a;
+  font-family: "Roboto Mono";
+  letter-spacing: 0;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.container {
+  height: 100vh;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.info svg {
+  fill: #f26b38;
+  height: 32px;
+}
+
+.contact-info h3 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.formtest {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.name input {
+  box-sizing: border-box;
+  width: 720px;
+  height: 60px;
+  display: block;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid line;
+}
+
+.email input {
+  box-sizing: border-box;
+  width: 720px;
+  height: 60px;
+  display: block;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid line;
+}
+.message textarea {
+  box-sizing: border-box;
+  width: 720px;
+  height: 120px;
+  resize: none;
+  display: block;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid line;
+}
+
+.formtest a {
+  background: #f26b38;
+  border-color: #f26b38;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 0.9rem;
+  line-height: 2.8rem;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0 30px;
+  margin: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
